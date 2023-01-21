@@ -8,7 +8,10 @@ public class TMove : MonoBehaviour
 
     private void Update()
     {
-        Rotator();
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        Rotator(new (x, y));
+
         Movement();
     }
 
@@ -17,13 +20,8 @@ public class TMove : MonoBehaviour
         transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
     }
 
-    private void Rotator()
+    public void Rotator(Vector2 input)
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        Vector2 input = new Vector2(x, y);
-
         if(input.SqrMagnitude() <= 0f)
             return;
 
