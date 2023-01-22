@@ -1,14 +1,10 @@
-using System;
 using UnityEngine;
+using static DEFINE;
 
 public class Target : PoolableMono
 {
     [SerializeField] int maxHp = 3;
     private int currentHp = 0;
-    
-    [Header("Hit Effect")]
-    [SerializeField] float timeDelayScale = 0.2f;
-    [SerializeField] float timeDelayDuration = 0.4f;
 
     private void Awake()
     {
@@ -23,7 +19,8 @@ public class Target : PoolableMono
     public void Hit(int damage)
     {
         currentHp -= damage;
-        TimeManager.Instance.SetTimeDelay(timeDelayScale, timeDelayDuration);
+
+        HitEffect();
 
         if(currentHp <= 0)
             Die();
@@ -32,5 +29,11 @@ public class Target : PoolableMono
     private void Die()
     {
         PoolManager.Instance.Push(this);
+    }
+
+    private void HitEffect()
+    {
+        TimeManager.Instance.SetTimeDelay(TimeDelayScale, HitEffectDuration);
+        CameraManager.Instance.ShakeCam(HitEffectDuration, CamShakePower, camShakeFreq);
     }
 }

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 213044647}
   - component: {fileID: 213044650}
   - component: {fileID: 213044651}
+  - component: {fileID: 213044652}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -211,6 +212,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &213044652
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213044646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &289317033
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +383,7 @@ GameObject:
   - component: {fileID: 314293747}
   - component: {fileID: 314293748}
   - component: {fileID: 314293749}
+  - component: {fileID: 314293750}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -413,6 +432,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e317b349d59e49d46998459c0cab9aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &314293750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314293746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6eb31ce0945aa144b52a06cbfed6bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &375241273
@@ -623,6 +654,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 96616725683709048, guid: e6a1ea8985386e9499b0cfeaaab257a5, type: 3}
+      propertyPath: timeDelayScale
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 96616725683709048, guid: e6a1ea8985386e9499b0cfeaaab257a5, type: 3}
+      propertyPath: hitEffectDuration
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 96616725683709048, guid: e6a1ea8985386e9499b0cfeaaab257a5, type: 3}
+      propertyPath: timeDelayDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a1ea8985386e9499b0cfeaaab257a5, type: 3}
 --- !u!1 &1162443335
@@ -636,7 +679,7 @@ GameObject:
   - component: {fileID: 1162443337}
   - component: {fileID: 1162443336}
   m_Layer: 0
-  m_Name: CM vcam1
+  m_Name: CmMainCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
