@@ -34,6 +34,6 @@ public class Target : PoolableMono
     private void HitEffect()
     {
         TimeManager.Instance.SetTimeDelay(TimeDelayScale, HitEffectDuration);
-        CameraManager.Instance.ShakeCam(HitEffectDuration, CamShakePower, camShakeFreq);
+        CameraManager.Instance.ShakeCam(HitEffectDuration, CamShakePower, CamShakeFreq);
     }
 }
