@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class ArrowHead : MonoBehaviour
 {
     [SerializeField] int damage = 1;
     public int Damage { get => damage; set => damage = value; }
